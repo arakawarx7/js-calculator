@@ -12,12 +12,19 @@ function calculatorModule(){
   let total = 0;
   let  calculator = {};
 
+
+
+  //function validation(x){
+
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
   calculator.load = function(x){
+    if(typeof x !== 'number'){
+      throw new Error('wrong') ;
+    }
     this.total  = x;
     console.log(this.total);
     return  this.total;
@@ -39,6 +46,9 @@ function calculatorModule(){
    */
 
    calculator.add = function(x){
+    if(typeof x !== 'number'){
+      throw new Error('wrong') ;
+    }
     this.total += x;
     console.log(this.total);
     return this.total;
@@ -48,6 +58,9 @@ function calculatorModule(){
    * @param  { Number } x
    */
    calculator.subtract = function(x){
+    if(typeof x !== 'number'){
+      throw new Error('wrong') ;
+    }
     this.total -= x;
     return this.total;
    };
@@ -57,6 +70,9 @@ function calculatorModule(){
    * @param  { Number } x
    */
    calculator.multiply = function(x){
+    if(typeof x !== 'number'){
+      throw new Error('wrong') ;
+    }
     this.total *= x;
     return this.total;
    };
@@ -66,6 +82,9 @@ function calculatorModule(){
    * @param  { Number } x
    */
    calculator.divide = function(x){
+    if(typeof x !== 'number'){
+      throw new Error('wrong') ;
+    }
     this.total /= x;
     return this.total;
    };
@@ -98,5 +117,7 @@ calculator.clearMemory = function(x){
    * Validation
    */
 
+
 return calculator;
 }
+
