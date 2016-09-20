@@ -10,7 +10,11 @@ function calculatorModule(){
 
   let memory = 0;
   let total = 0;
-  let  calculator = {};
+  // var foo ={};
+  // foo.test = function function_name(argument) {
+
+  // };
+   let  calculator = {};
 
 
 
@@ -109,7 +113,7 @@ function calculatorModule(){
   /**
    * Clear the value stored at `memory`
    */
-calculator.clearMemory = function(x){
+  calculator.clearMemory = function(x){
   memory = 0;
   return memory;
   };
